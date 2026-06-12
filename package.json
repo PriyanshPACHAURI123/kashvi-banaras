@@ -1,0 +1,12 @@
+{
+  "name": "kashvi-banaras",
+  "version": "1.0.0",
+  "description": "Luxury Banarasi fashion e-commerce website",
+  "author": "Priyansh <pachauripriyansh2@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "keywords": ["banarasi", "luxury", "fashion", "ecommerce", "saree"]
+}

@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kashvi Banaras — Handwoven Stories from the Heart of Banaras. Discover timeless Banarasi sarees, lehengas and bridal creations crafted by master artisans.">
+<title>Kashvi Banaras — Handwoven Luxury from the Heart of Banaras</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --maroon: #5A0F1C;
+  --maroon-deep: #3D0910;
+  --maroon-light: #7A1E2E;
+  --gold: #C8A96B;
+  --gold-light: #E2C98A;
+  --gold-pale: #F0E4CC;
+  --ivory: #F8F3EB;
+  --ivory-dark: #EDE6D8;
+  --charcoal: #1B1B1B;
+  --charcoal-mid: #2E2E2E;
+  --charcoal-light: #4A4A4A;
+  --white: #FFFFFF;
+  --ff-display: 'Cormorant Garamond', Georgia, serif;
+  --ff-accent: 'IM Fell English', Georgia, serif;
+  --ff-body: 'Jost', system-ui, sans-serif;
+  --nav-h: 80px;
+  --transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--ff-body);
+  background: var(--ivory);
+  color: var(--charcoal);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+ul { list-style: none; }
+
+/* ─── SCROLLBAR ─────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--ivory); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+/* ─── UTILITY ────────────────────────────────────────────── */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+.container-wide { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+
+.gold-rule {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 20px;
+}
+.gold-rule::before, .gold-rule::after {
+  content: ''; flex: 1; height: 0.5px; background: var(--gold);
+}
+.gold-rule span {
+  font-family: var(--ff-body); font-size: 11px; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--gold); font-weight: 400;
+}
+
+.eyebrow {
+  font-family: var(--ff-body); font-size: 11px; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--gold); font-weight: 400;
+  margin-bottom: 16px; display: block;
+}
+
+.section-title {
+  font-family: var(--ff-display); font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 300; line-height: 1.15; color: var(--maroon);
+  letter-spacing: -0.01em;
+}
+
+.section-title em { font-style: italic; font-weight: 300; }
+
+/* ─── ANNOUNCEMENT BAR ───────────────────────────────────── */
+.announcement {
+  background: var(--maroon); color: var(--gold-light);
+  text-align: center; padding: 10px 20px;
+  font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+  font-weight: 400; font-family: var(--ff-body);
+}
+
+/* ─── NAVIGATION ─────────────────────────────────────────── */
+.nav {
+  position: fixed; top: 34px; left: 0; right: 0; z-index: 100;
+  background: transparent;
+  transition: background 0.4s var(--transition), top 0.3s var(--transition);
+}
+.nav.scrolled {
+  top: 0; background: rgba(248, 243, 235, 0.97);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid var(--gold-pale);
+}
+
+.nav-inner {
+  display: grid; grid-template-columns: 1fr auto 1fr;
+  align-items: center; height: var(--nav-h); padding: 0 40px;
+  max-width: 1440px; margin: 0 auto;
+}
+
+.nav-left, .nav-right { display: flex; align-items: center; gap: 28px; }
+.nav-right { justify-content: flex-end; }
+
+.nav-link {
+  font-family: var(--ff-body); font-size: 11.5px; letter-spacing: 0.18em;
+  text-transform: uppercase; font-weight: 400;
+  color: var(--ivory); transition: color 0.3s;
+  position: relative; padding-bottom: 2px;
+}
+.nav.scrolled .nav-link { color: var(--charcoal-light); }
+
+.nav-link::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 0.5px; background: var(--gold);
+  transform: scaleX(0); transform-origin: right;
+  transition: transform 0.4s var(--transition);
+}
+.nav-link:hover::after { transform: scaleX(1); transform-origin: left; }
+.nav-link:hover { color: var(--gold); }
+.nav.scrolled .nav-link:hover { color: var(--maroon); }
+
+.nav-logo {
+  text-align: center; cursor: pointer;
+}
+.nav-logo-main {
+  font-family: var(--ff-display); font-size: 26px; font-weight: 400;
+  letter-spacing: 0.12em; color: var(--ivory);
+  transition: color 0.3s; display: block; line-height: 1;
+}
+.nav.scrolled .nav-logo-main { color: var(--maroon); }
+.nav-logo-sub {
+  font-family: var(--ff-body); font-size: 8.5px; letter-spacing: 0.42em;
+  text-transform: uppercase; color: var(--gold);
+  display: block; margin-top: 4px;
+}
+
+.nav-icon-btn {
+  color: var(--ivory); font-size: 18px;
+  width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+  transition: color 0.3s; position: relative;
+}
+.nav.scrolled .nav-icon-btn { color: var(--charcoal-light); }
+.nav-icon-btn:hover { color: var(--gold); }
+.nav.scrolled .nav-icon-btn:hover { color: var(--maroon); }
+.nav-icon-btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+
+.nav-cart-count {
+  position: absolute; top: 4px; right: 4px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--gold); color: var(--maroon);
+  font-size: 8px; font-weight: 500; display: flex;
+  align-items: center; justify-content: center; line-height: 1;
+}
+
+/* ─── HERO ────────────────────────────────────────────────── */
+.hero {
+  position: relative; height: 100svh; min-height: 680px;
+  display: flex; align-items: center; overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(135deg, #3D0910 0%, #5A0F1C 35%, #7A1E2E 60%, #3D0910 100%);
+}
+
+/* Cinematic woven texture overlay */
+.hero-texture {
+  position: absolute; inset: 0; z-index: 1; opacity: 0.08;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(200,169,107,0.3) 2px, rgba(200,169,107,0.3) 3px),
+    repeating-linear-gradient(90deg, transparent, transparent 8px, rgba(200,169,107,0.1) 8px, rgba(200,169,107,0.1) 9px);
+}
+
+/* Decorative motif circles */
+.hero-motif {
+  position: absolute; border-radius: 50%;
+  border: 0.5px solid rgba(200,169,107,0.2); z-index: 1;
+  animation: motif-pulse 8s ease-in-out infinite;
+}
+.hero-motif:nth-child(1) { width: 600px; height: 600px; top: 50%; right: -100px; transform: translateY(-50%); animation-delay: 0s; }
+.hero-motif:nth-child(2) { width: 800px; height: 800px; top: 50%; right: -200px; transform: translateY(-50%); animation-delay: 1s; }
+.hero-motif:nth-child(3) { width: 400px; height: 400px; top: 50%; right: 0px; transform: translateY(-50%); animation-delay: 2s; border-color: rgba(200,169,107,0.35); }
+
+@keyframes motif-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 1440px; margin: 0 auto; padding: 0 40px;
+  width: 100%;
+}
+
+.hero-label {
+  font-family: var(--ff-body); font-size: 10.5px; letter-spacing: 0.4em;
+  text-transform: uppercase; color: var(--gold); font-weight: 400;
+  margin-bottom: 32px; display: flex; align-items: center; gap: 16px;
+}
+.hero-label::before {
+  content: ''; width: 40px; height: 0.5px; background: var(--gold);
+}
+
+.hero-headline {
+  font-family: var(--ff-display); font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 300; line-height: 1.1; color: var(--ivory);
+  max-width: 700px; letter-spacing: -0.02em; margin-bottom: 28px;
+}
+.hero-headline em { font-style: italic; color: var(--gold-light); }
+
+.hero-sub {
+  font-family: var(--ff-body); font-size: clamp(14px, 1.2vw, 16px);
+  line-height: 1.8; color: rgba(248,243,235,0.72); font-weight: 300;
+  max-width: 500px; margin-bottom: 52px; letter-spacing: 0.02em;
+}
+
+.hero-ctas { display: flex; gap: 20px; flex-wrap: wrap; }
+
+.btn-primary {
+  font-family: var(--ff-body); font-size: 11px; letter-spacing: 0.28em;
+  text-transform: uppercase; font-weight: 500;
+  padding: 16px 40px; background: var(--gold);
+  color: var(--maroon-deep); border: none;
+  transition: all 0.35s var(--transition);
+  display: inline-block; position: relative; overflow: hidden;
+}
+.btn-primary::before {
+  content: ''; position: absolute; inset: 0;
+  background: var(--ivory); transform: translateX(-101%);
+  transition: transform 0.4s var(--transition); z-index: 0;
+}
+.btn-primary:hover::before { transform: translateX(0); }
+.btn-primary span { position: relative; z-index: 1; }
+.btn-primary:hover { color: var(--maroon); }
+
+.btn-outline {
+  font-family: var(--ff-body); font-size: 11px; letter-spacing: 0.28em;
+  text-transform: uppercase; font-weight: 500;
+  padding: 15px 40px;
+  color: var(--ivory); border: 0.5px solid rgba(248,243,235,0.5);
+  transition: all 0.35s var(--transition);
+  display: inline-block; position: relative; overflow: hidden;
+}
+.btn-outline::before {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(248,243,235,0.1); transform: translateX(-101%);
+  transition: transform 0.4s var(--transition); z-index: 0;
+}
+.btn-outline:hover::before { transform: translateX(0); }
+.btn-outline span { position: relative; z-index: 1; }
+.btn-outline:hover { border-color: var(--ivory); }
+
+.hero-scroll-hint {
+  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+  z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 10px;
+  opacity: 0.6;
+}
+.hero-scroll-hint span {
+  font-family: var(--ff-body); font-size: 9px; letter-spacing: 0.35em;
+  text-transform: uppercase; color: var(--gold);
+}
+.scroll-line {
+  width: 0.5px; height: 50px; background: linear-gradient(to bottom, var(--gold), transparent);
+  animation: scroll-pulse 2s ease-in-out infinite;
+}
+@keyframes scroll-pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+
+/* ─── MARQUEE STRIP ──────────────────────────────────────── */
+.marquee-strip {
+  background: var(--maroon); padding: 16px 0; overflow: hidden;
+  border-top: 0.5px solid rgba(200,169,107,0.3);
+  border-bottom: 0.5px solid rgba(200,169,107,0.3);
+}
+.marquee-track {
+  display: flex; gap: 0; white-space: nowrap;
+  animation: marquee-move 30s linear infinite;
+}
+.marquee-item {
+  display: inline-flex; align-items: center; gap: 32px; padding: 0 32px;
+  font-family: var(--ff-body); font-size: 10px; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--gold); font-weight: 400;
+}
+.marquee-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--gold); opacity: 0.5; }
+@keyframes marquee-move { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* ─── SECTION SHARED ──────────────────────────────────────── */
+section { padding: 120px 0; }
+
+/* ─── ABOUT ───────────────────────────────────────────────── */
+.about { background: var(--ivory); }
+
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 100px; align-items: center;
+}
+
+.about-visual {
+  position: relative;
+}
+
+.about-img-frame {
+  position: relative; aspect-ratio: 3/4; overflow: hidden;
+  background: var(--maroon);
+}
+
+.about-img-placeholder {
+  width: 100%; height: 100%;
+  background: linear-gradient(160deg, #5A0F1C 0%, #7A1E2E 50%, #3D0910 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* Intricate Banarasi motif SVG pattern */
+.about-img-placeholder svg { width: 60%; height: 60%; opacity: 0.25; }
+
+.about-img-accent {
+  position: absolute; bottom: -24px; right: -24px;
+  width: 200px; height: 200px;
+  background: var(--gold-pale); border: 0.5px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 8px;
+}
+.about-img-accent-num {
+  font-family: var(--ff-display); font-size: 48px; font-weight: 300;
+  color: var(--maroon); line-height: 1;
+}
+.about-img-accent-label {
+  font-family: var(--ff-body); font-size: 9px; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--charcoal-light); text-align: center;
+}
+
+.about-text { padding-right: 20px; }
+
+.about-pullquote {
+  font-family: var(--ff-accent); font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-style: italic; font-weight: 400; color: var(--maroon);
+  line-height: 1.4; margin: 28px 0 32px; letter-spacing: 0.01em;
+  border-left: 2px solid var(--gold); padding-left: 24px;
+}
+
+.about-body {
+  font-family: var(--ff-body); font-size: 15px; line-height: 1.9;
+  color: var(--charcoal-light); font-weight: 300; margin-bottom: 20px;
+}
+
+.about-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px; margin-top: 48px; padding-top: 40px;
+  border-top: 0.5px solid var(--gold-pale);
+}
+.stat-item { text-align: center; }
+.stat-num {
+  font-family: var(--ff-display); font-size: 2.8rem; font-weight: 300;
+  color: var(--maroon); display: block; line-height: 1;
+}
+.stat-label {
+  font-family: var(--ff-body); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--charcoal-light); margin-top: 8px;
+  display: block;
+}
+
+/* ─── COLLECTIONS ─────────────────────────────────────────── */
+.collections { background: var(--charcoal); padding: 100px 0; }
+.collections .section-title { color: var(--ivory); }
+.collections .section-title em { color: var(--gold-light); }
+.collections .eyebrow { color: var(--gold); }
+
+.collections-header {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin-bottom: 60px;
+}
+.collections-header-text { max-width: 500px; }
+.collections-sub {
+  font-family: var(--ff-body); font-size: 14px; line-height: 1.8;
+  color: rgba(248,243,235,0.55); font-weight: 300; margin-top: 20px;
+}
+
+.btn-text-gold {
+  font-family: var(--ff-body); font-size: 11px; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--gold); font-weight: 400;
+  display: inline-flex; align-items: center; gap: 12px;
+  border-bottom: 0.5px solid rgba(200,169,107,0.4); padding-bottom: 4px;
+  transition: gap 0.3s var(--transition), border-color 0.3s;
+}
+.btn-text-gold:hover { gap: 20px; border-color: var(--gold); }
+.btn-text-gold svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+
+.collections-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto; gap: 2px;
+}
+
+.coll-card {
+  position: relative; overflow: hidden; cursor: pointer;
+  background: var(--maroon-deep);
+}
+.coll-card:nth-child(1) { grid-row: span 2; }
+
+.coll-card-img {
+  width: 100%; aspect-ratio: unset; height: 100%; min-height: 300px;
+  object-fit: cover; display: block;
+  background: var(--maroon);
+  transition: transform 0.8s var(--transition);
+}
+.coll-card:nth-child(1) .coll-card-img { min-height: 600px; }
+
+.coll-placeholder {
+  width: 100%; height: 100%; min-height: inherit;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.8s var(--transition);
+}
+
+.coll-card:hover .coll-placeholder { transform: scale(1.04); }
+
+/* Rich gradient fills per collection */
+.coll-card:nth-child(1) .coll-placeholder { background: linear-gradient(160deg, #3D0910 0%, #6B1222 40%, #8B1C2E 70%, #5A0F1C 100%); }
+.coll-card:nth-child(2) .coll-placeholder { background: linear-gradient(160deg, #1B1B1B 0%, #2E1A10 60%, #3D2510 100%); }
+.coll-card:nth-child(3) .coll-placeholder { background: linear-gradient(160deg, #0D1A1A 0%, #122020 60%, #1A2E2A 100%); }
+.coll-card:nth-child(4) .coll-placeholder { background: linear-gradient(160deg, #1A1020 0%, #251530 60%, #1B1B1B 100%); }
+.coll-card:nth-child(5) .coll-placeholder { background: linear-gradient(160deg, #1A1010 0%, #2A1818 60%, #1B1010 100%); }
+
+.coll-motif {
+  position: absolute; inset: 0; opacity: 0.12;
+  display: flex; align-items: center; justify-content: center;
+  pointer-events: none;
+}
+
+.coll-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(27,11,17,0.85) 0%, rgba(27,11,17,0) 55%);
+  transition: background 0.5s var(--transition);
+}
+.coll-card:hover .coll-overlay {
+  background: linear-gradient(to top, rgba(27,11,17,0.92) 0%, rgba(27,11,17,0.15) 60%);
+}
+
+.coll-info {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 32px 28px; z-index: 2;
+}
+.coll-label {
+  font-family: var(--ff-body); font-size: 9.5px; letter-spacing: 0.32em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+  display: block; font-weight: 400;
+}
+.coll-name {
+  font-family: var(--ff-display); font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 300; color: var(--ivory); line-height: 1.2;
+  margin-bottom: 14px;
+}
+.coll-card:nth-child(1) .coll-name { font-size: clamp(1.8rem, 3vw, 2.8rem); }
+.coll-cta {
+  font-family: var(--ff-body); font-size: 10px; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--gold-light);
+  display: inline-flex; align-items: center; gap: 10px;
+  opacity: 0; transform: translateY(8px);
+  transition: opacity 0.4s var(--transition), transform 0.4s var(--transition);
+}
+.coll-cta svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+.coll-card:hover .coll-cta { opacity: 1; transform: translateY(0); }
+
+/* ─── PRODUCTS ────────────────────────────────────────────── */
+.products { background: var(--ivory); }
+
+.products-nav {
+  display: flex; gap: 32px; margin-bottom: 60px;
+  border-bottom: 0.5px solid var(--gold-pale);
+  padding-bottom: 0;
+}
+.products-nav-btn {
+  font-family: var(--ff-body); font-size: 11px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--charcoal-light); font-weight: 400;
+  padding-bottom: 16px; position: relative; transition: color 0.3s;
+  cursor: pointer; background: none; border: none;
+}
+.products-nav-btn::after {
+  content: ''; position: absolute; bottom: -0.5px; left: 0; right: 0;
+  height: 1.5px; background: var(--maroon); transform: scaleX(0);
+  transition: transform 0.3s var(--transition);
+}
+.products-nav-btn.active { color: var(--maroon); }
+.products-nav-btn.active::after { transform: scaleX(1); }
+.products-nav-btn:hover { color: var(--maroon); }
+
+.products-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+}
+
+.prod-card {
+  position: relative; cursor: pointer;
+  transition: transform 0.4s var(--transition);
+}
+.prod-card:hover { transform: translateY(-6px); }
+
+.prod-img-wrap {
+  position: relative; aspect-ratio: 3/4; overflow: hidden;
+  background: var(--ivory-dark); margin-bottom: 20px;
+}
+.prod-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.7s var(--transition);
+}
+.prod-card:hover .prod-placeholder { transform: scale(1.05); }
+
+.prod-placeholder:nth-child(1) { background: linear-gradient(140deg, #3D0910, #7A1E2E); }
+.prod-p1 { background: linear-gradient(140deg, #3D0910, #7A1E2E); width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
+.prod-p2 { background: linear-gradient(140deg, #1A2E2A, #0D3020); width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
+.prod-p3 { background: linear-gradient(140deg, #251530, #3A1A50); width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
+.prod-p4 { background: linear-gradient(140deg, #2A1A0A, #4A2E10); width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
+
+.prod-badge {
+  position: absolute; top: 16px; left: 16px;
+  font-family: var(--ff-body); font-size: 9px; letter-spacing: 0.2em;
+  text-transform: uppercase; padding: 5px 12px;
+  font-weight: 500; z-index: 2;
+}
+.badge-new { background: var(--maroon); color: var(--gold-light); }
+.badge-limited { background: var(--charcoal); color: var(--gold); }
+.badge-bridal { background: var(--gold); color: var(--maroon-deep); }
+
+.prod-actions {
+  position: absolute; top: 16px; right: 16px;
+  display: flex; flex-direction: column; gap: 8px; z-index: 2;
+  opacity: 0; transform: translateX(8px);
+  transition: opacity 0.3s var(--transition), transform 0.3s var(--transition);
+}
+.prod-card:hover .prod-actions { opacity: 1; transform: translateX(0); }
+
+.prod-action-btn {
+  width: 36px; height: 36px; background: rgba(248,243,235,0.95);
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.3s;
+}
+.prod-action-btn:hover { background: var(--ivory); }
+.prod-action-btn svg {
+  width: 16px; height: 16px; stroke: var(--charcoal);
+  fill: none; stroke-width: 1.5;
+}
+
+.prod-quick-view {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: var(--maroon); color: var(--gold-light);
+  text-align: center; padding: 12px;
+  font-family: var(--ff-body); font-size: 9.5px; letter-spacing: 0.25em;
+  text-transform: uppercase; font-weight: 500;
+  opacity: 0; transform: translateY(100%);
+  transition: opacity 0.3s var(--transition), transform 0.3s var(--transition);
+}
+.prod-card:hover .prod-quick-view { opacity: 1; transform: translateY(0); }
+
+.prod-info {}
+.prod-name {
+  font-family: var(--ff-display); font-size: 1.15rem; font-weight: 400;
+  color: var(--charcoal); margin-bottom: 6px; line-height: 1.3;
+}
+.prod-detail {
+  font-family: var(--ff-body); font-size: 12px; color: var(--charcoal-light);
+  letter-spacing: 0.08em; margin-bottom: 10px; font-weight: 300;
+}
+.prod-price {
+  font-family: var(--ff-body); font-size: 14px; color: var(--maroon);
+  font-weight: 500; letter-spacing: 0.05em;
+}
+.prod-price-original {
+  font-size: 12px; color: var(--charcoal-light); text-decoration: line-through;
+  margin-right: 8px; font-weight: 300;
+}
+
+.prod-whatsapp {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 10px;
+  font-family: var(--ff-body); font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: #25D366; font-weight: 400;
+  transition: gap 0.3s;
+}
+.prod-whatsapp:hover { gap: 10px; }
+.prod-whatsapp svg { width: 14px; height: 14px; fill: #25D366; }
+
+/* ─── CRAFTSMANSHIP ───────────────────────────────────────── */
+.craft { background: var(--maroon); overflow: hidden; }
+.craft .section-title { color: var(--ivory); }
+.craft .eyebrow { color: var(--gold); }
+
+.craft-intro {
+  text-align: center; max-width: 680px; margin: 0 auto 80px;
+}
+.craft-intro-body {
+  font-family: var(--ff-body); font-size: 15px; line-height: 1.9;
+  color: rgba(248,243,235,0.65); margin-top: 24px; font-weight: 300;
+}
+
+.craft-timeline {
+  position: relative; max-width: 1000px; margin: 0 auto;
+}
+.craft-timeline-line {
+  position: absolute; top: 32px; left: 0; right: 0; height: 0.5px;
+  background: rgba(200,169,107,0.25); z-index: 0;
+}
+.craft-timeline-progress {
+  height: 100%; background: var(--gold); width: 0%;
+  transition: width 1.5s ease;
+}
+
+.craft-steps {
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  gap: 0; position: relative; z-index: 1;
+}
+
+.craft-step {
+  text-align: center; padding: 0 16px;
+  cursor: default;
+}
+.craft-step-dot {
+  width: 64px; height: 64px; border-radius: 50%;
+  border: 0.5px solid rgba(200,169,107,0.4);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 28px; background: var(--maroon);
+  transition: all 0.4s var(--transition);
+  position: relative;
+}
+.craft-step-dot::before {
+  content: ''; position: absolute; inset: 4px; border-radius: 50%;
+  border: 0.5px solid rgba(200,169,107,0.2);
+}
+.craft-step:hover .craft-step-dot,
+.craft-step.active .craft-step-dot {
+  border-color: var(--gold); background: rgba(200,169,107,0.1);
+}
+.craft-step-dot svg {
+  width: 22px; height: 22px; stroke: rgba(200,169,107,0.5);
+  fill: none; stroke-width: 1.2;
+  transition: stroke 0.4s;
+}
+.craft-step:hover .craft-step-dot svg,
+.craft-step.active .craft-step-dot svg { stroke: var(--gold); }
+
+.craft-step-num {
+  font-family: var(--ff-display); font-size: 10px; font-weight: 300;
+  color: rgba(200,169,107,0.4); letter-spacing: 0.2em;
+  margin-bottom: 12px; display: block;
+}
+.craft-step-title {
+  font-family: var(--ff-display); font-size: 1.1rem; font-weight: 400;
+  color: var(--ivory); margin-bottom: 10px; line-height: 1.3;
+}
+.craft-step-desc {
+  font-family: var(--ff-body); font-size: 12.5px; line-height: 1.7;
+  color: rgba(248,243,235,0.5); font-weight: 300;
+}
+
+/* ─── TESTIMONIALS ────────────────────────────────────────── */
+.testimonials { background: var(--ivory-dark); }
+.testimonials .section-title { color: var(--maroon); }
+
+.testimonials-header { text-align: center; margin-bottom: 72px; }
+
+.testimonials-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+  background: var(--gold-pale);
+}
+
+.testi-card {
+  background: var(--ivory); padding: 48px 40px;
+  position: relative; overflow: hidden;
+  transition: background 0.4s var(--transition);
+}
+.testi-card:hover { background: var(--white); }
+
+.testi-quote-mark {
+  font-family: var(--ff-display); font-size: 6rem; font-weight: 300;
+  color: var(--gold-pale); line-height: 0.5; margin-bottom: 20px;
+  display: block; pointer-events: none;
+}
+
+.testi-stars {
+  display: flex; gap: 4px; margin-bottom: 20px;
+}
+.testi-star {
+  width: 12px; height: 12px;
+  fill: var(--gold); stroke: none;
+}
+
+.testi-text {
+  font-family: var(--ff-display); font-size: 1.05rem; font-style: italic;
+  font-weight: 400; line-height: 1.7; color: var(--charcoal);
+  margin-bottom: 28px;
+}
+
+.testi-divider { width: 32px; height: 0.5px; background: var(--gold); margin-bottom: 20px; }
+
+.testi-author-name {
+  font-family: var(--ff-body); font-size: 12px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--charcoal); font-weight: 500;
+  margin-bottom: 4px;
+}
+.testi-author-detail {
+  font-family: var(--ff-body); font-size: 11.5px; color: var(--charcoal-light);
+  font-weight: 300;
+}
+
+/* ─── JOURNAL ─────────────────────────────────────────────── */
+.journal { background: var(--ivory); }
+.journal .section-title { color: var(--maroon); }
+
+.journal-header { text-align: center; margin-bottom: 72px; }
+
+.journal-grid {
+  display: grid; grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 32px;
+}
+
+.journal-card { cursor: pointer; }
+.journal-card:hover .journal-img-placeholder { transform: scale(1.04); }
+
+.journal-img-wrap {
+  overflow: hidden; aspect-ratio: 3/2; margin-bottom: 24px;
+  background: var(--ivory-dark);
+}
+.journal-card:nth-child(1) .journal-img-wrap { aspect-ratio: 4/3; }
+
+.journal-img-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.7s var(--transition);
+}
+
+.journal-p1 { background: linear-gradient(140deg, #2E1A0A, #4A2E18); width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
+.journal-p2 { background: linear-gradient(140deg, #0A1A2E, #102040); width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
+.journal-p3 { background: linear-gradient(140deg, #1A0A1A, #2A1030); width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
+
+.journal-cat {
+  font-family: var(--ff-body); font-size: 9.5px; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--gold); font-weight: 400;
+  margin-bottom: 12px; display: block;
+}
+.journal-title {
+  font-family: var(--ff-display); font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 400; color: var(--charcoal); line-height: 1.3;
+  margin-bottom: 12px;
+}
+.journal-card:nth-child(1) .journal-title { font-size: clamp(1.4rem, 2.5vw, 2rem); }
+.journal-excerpt {
+  font-family: var(--ff-body); font-size: 13.5px; color: var(--charcoal-light);
+  line-height: 1.7; font-weight: 300; margin-bottom: 16px;
+}
+.journal-meta {
+  font-family: var(--ff-body); font-size: 10.5px; letter-spacing: 0.12em;
+  color: var(--charcoal-light); font-weight: 300;
+  display: flex; align-items: center; gap: 12px;
+}
+.journal-meta::before {
+  content: ''; width: 20px; height: 0.5px; background: var(--gold);
+}
+
+/* ─── FOOTER ──────────────────────────────────────────────── */
+footer {
+  background: var(--charcoal); color: var(--ivory);
+}
+
+.footer-top {
+  padding: 80px 0 64px; border-bottom: 0.5px solid rgba(200,169,107,0.15);
+}
+
+.footer-grid {
+  display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 60px;
+}
+
+.footer-brand {}
+.footer-logo {
+  font-family: var(--ff-display); font-size: 28px; font-weight: 400;
+  letter-spacing: 0.1em; color: var(--ivory); margin-bottom: 6px;
+}
+.footer-logo-sub {
+  font-family: var(--ff-body); font-size: 8px; letter-spacing: 0.45em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 24px;
+  display: block;
+}
+.footer-tagline {
+  font-family: var(--ff-body); font-size: 13.5px; line-height: 1.8;
+  color: rgba(248,243,235,0.5); font-weight: 300; margin-bottom: 32px;
+  max-width: 300px;
+}
+.footer-newsletter-label {
+  font-family: var(--ff-body); font-size: 10px; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 14px;
+  display: block; font-weight: 400;
+}
+.footer-newsletter-form {
+  display: flex; border-bottom: 0.5px solid rgba(200,169,107,0.3);
+  padding-bottom: 1px;
+}
+.footer-newsletter-input {
+  flex: 1; background: none; border: none; outline: none;
+  font-family: var(--ff-body); font-size: 13px; color: var(--ivory);
+  font-weight: 300; padding: 10px 0; letter-spacing: 0.05em;
+}
+.footer-newsletter-input::placeholder { color: rgba(248,243,235,0.3); }
+.footer-newsletter-btn {
+  font-family: var(--ff-body); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gold); font-weight: 400;
+  padding: 10px 0 10px 16px;
+  transition: letter-spacing 0.3s;
+}
+.footer-newsletter-btn:hover { letter-spacing: 0.3em; }
+
+.footer-col-title {
+  font-family: var(--ff-body); font-size: 10px; letter-spacing: 0.28em;
+  text-transform: uppercase; color: var(--gold); font-weight: 500;
+  margin-bottom: 28px;
+}
+.footer-links { display: flex; flex-direction: column; gap: 14px; }
+.footer-link {
+  font-family: var(--ff-body); font-size: 13px; color: rgba(248,243,235,0.55);
+  font-weight: 300; transition: color 0.3s; letter-spacing: 0.04em;
+}
+.footer-link:hover { color: var(--gold-light); }
+
+.footer-socials {
+  display: flex; gap: 20px; margin-top: 32px;
+}
+.footer-social-link {
+  width: 36px; height: 36px; border: 0.5px solid rgba(200,169,107,0.25);
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color 0.3s, background 0.3s;
+}
+.footer-social-link:hover { border-color: var(--gold); background: rgba(200,169,107,0.08); }
+.footer-social-link svg {
+  width: 15px; height: 15px; stroke: rgba(248,243,235,0.5);
+  fill: none; stroke-width: 1.5;
+  transition: stroke 0.3s;
+}
+.footer-social-link:hover svg { stroke: var(--gold); }
+
+.footer-bottom {
+  padding: 24px 0;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.footer-copy {
+  font-family: var(--ff-body); font-size: 11px; letter-spacing: 0.12em;
+  color: rgba(248,243,235,0.3); font-weight: 300;
+}
+.footer-legal {
+  display: flex; gap: 28px;
+}
+.footer-legal-link {
+  font-family: var(--ff-body); font-size: 10.5px; letter-spacing: 0.1em;
+  color: rgba(248,243,235,0.3); font-weight: 300;
+  transition: color 0.3s;
+}
+.footer-legal-link:hover { color: rgba(248,243,235,0.6); }
+
+/* ─── FLOATING WHATSAPP ──────────────────────────────────── */
+.floating-wa {
+  position: fixed; bottom: 32px; right: 32px; z-index: 90;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: #25D366; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+  transition: transform 0.3s var(--transition), box-shadow 0.3s;
+}
+.floating-wa:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.45); }
+.floating-wa svg { width: 26px; height: 26px; fill: white; }
+.floating-wa-label {
+  position: absolute; right: 64px; white-space: nowrap;
+  font-family: var(--ff-body); font-size: 11.5px; letter-spacing: 0.1em;
+  background: var(--charcoal); color: var(--ivory); padding: 7px 14px;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s;
+}
+.floating-wa:hover .floating-wa-label { opacity: 1; }
+
+/* ─── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .about-grid { grid-template-columns: 1fr; gap: 60px; }
+  .about-text { padding-right: 0; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .collections-grid { grid-template-columns: 1fr 1fr; }
+  .coll-card:nth-child(1) { grid-row: span 1; grid-column: span 2; }
+  .craft-steps { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .craft-timeline-line { display: none; }
+  .journal-grid { grid-template-columns: 1fr 1fr; }
+  .journal-card:nth-child(1) { grid-column: span 2; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+
+@media (max-width: 768px) {
+  :root { --nav-h: 64px; }
+  .container, .container-wide { padding: 0 20px; }
+  section { padding: 80px 0; }
+  .nav-inner { padding: 0 20px; }
+  .nav-left { display: none; }
+  .hero-content { padding: 0 20px; }
+  .collections-header { flex-direction: column; gap: 24px; align-items: flex-start; }
+  .collections-grid { grid-template-columns: 1fr; }
+  .coll-card:nth-child(1) { grid-column: span 1; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .products-nav { gap: 20px; overflow-x: auto; padding-bottom: 0; }
+  .craft-steps { grid-template-columns: 1fr 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .journal-grid { grid-template-columns: 1fr; }
+  .journal-card:nth-child(1) { grid-column: span 1; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  .about-stats { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announcement" role="banner">
+  Complimentary express shipping on bridal orders &nbsp;·&nbsp; Book a personal styling consultation &nbsp;·&nbsp; New Arrivals: The Gulabi Durbar Edit
+</div>
+
+<!-- Navigation -->
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="#" class="nav-link">Sarees</a>
+      <a href="#" class="nav-link">Lehengas</a>
+      <a href="#" class="nav-link">Bridal</a>
+      <a href="#" class="nav-link">Heritage</a>
+    </div>
+    <div class="nav-logo" aria-label="Kashvi Banaras — Home">
+      <span class="nav-logo-main">Kashvi Banaras</span>
+      <span class="nav-logo-sub">Est. Varanasi</span>
+    </div>
+    <div class="nav-right">
+      <button class="nav-icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <a href="#" class="nav-link" style="display:none">Our Craft</a>
+      <a href="#" class="nav-link" style="display:none">Journal</a>
+      <button class="nav-icon-btn" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+      <button class="nav-icon-btn" aria-label="Shopping bag (2 items)" style="position:relative">
+        <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="nav-cart-count">2</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-bg"></div>
+  <div class="hero-texture"></div>
+  <div class="hero-motif"></div>
+  <div class="hero-motif"></div>
+  <div class="hero-motif"></div>
+
+  <div class="hero-content">
+    <p class="hero-label">New Arrivals — The Gulabi Durbar Edit</p>
+    <h1 class="hero-headline">
+      Handwoven Stories<br>from the <em>Heart of</em><br>Banaras
+    </h1>
+    <p class="hero-sub">
+      Discover timeless Banarasi creations crafted by master artisans for the modern woman. Every thread carries six centuries of unbroken tradition.
+    </p>
+    <div class="hero-ctas">
+      <a href="#collections" class="btn-primary"><span>Explore Collection</span></a>
+      <a href="#contact" class="btn-outline"><span>Book Styling Consultation</span></a>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- Marquee Strip -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <div class="marquee-item">Handloom Banarasi <span class="marquee-dot"></span></div>
+    <div class="marquee-item">GI Tagged Fabrics <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Master Weavers of Varanasi <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Bridal Couture <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Zari Weaving Since 1887 <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Ethical Luxury <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Heirloom Pieces <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Bespoke Bridal <span class="marquee-dot"></span></div>
+    <!-- Duplicate for seamless loop -->
+    <div class="marquee-item">Handloom Banarasi <span class="marquee-dot"></span></div>
+    <div class="marquee-item">GI Tagged Fabrics <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Master Weavers of Varanasi <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Bridal Couture <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Zari Weaving Since 1887 <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Ethical Luxury <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Heirloom Pieces <span class="marquee-dot"></span></div>
+    <div class="marquee-item">Bespoke Bridal <span class="marquee-dot"></span></div>
+  </div>
+</div>
+
+<!-- About -->
+<section class="about" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-img-frame">
+          <div class="about-img-placeholder">
+            <!-- Banarasi Buta Motif SVG -->
+            <svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <ellipse cx="100" cy="150" rx="45" ry="90" stroke="#C8A96B" stroke-width="0.8"/>
+              <ellipse cx="100" cy="150" rx="30" ry="70" stroke="#C8A96B" stroke-width="0.5"/>
+              <ellipse cx="100" cy="150" rx="15" ry="50" stroke="#C8A96B" stroke-width="0.5"/>
+              <circle cx="100" cy="150" r="6" stroke="#C8A96B" stroke-width="0.8" fill="rgba(200,169,107,0.2)"/>
+              <!-- Petal clusters -->
+              <ellipse cx="100" cy="70" rx="10" ry="20" stroke="#C8A96B" stroke-width="0.5" transform="rotate(0 100 70)"/>
+              <ellipse cx="100" cy="230" rx="10" ry="20" stroke="#C8A96B" stroke-width="0.5"/>
+              <ellipse cx="60" cy="150" rx="10" ry="20" stroke="#C8A96B" stroke-width="0.5" transform="rotate(90 60 150)"/>
+              <ellipse cx="140" cy="150" rx="10" ry="20" stroke="#C8A96B" stroke-width="0.5" transform="rotate(90 140 150)"/>
+              <!-- Diagonal petals -->
+              <ellipse cx="75" cy="100" rx="8" ry="18" stroke="#C8A96B" stroke-width="0.4" transform="rotate(-45 75 100)"/>
+              <ellipse cx="125" cy="100" rx="8" ry="18" stroke="#C8A96B" stroke-width="0.4" transform="rotate(45 125 100)"/>
+              <ellipse cx="75" cy="200" rx="8" ry="18" stroke="#C8A96B" stroke-width="0.4" transform="rotate(45 75 200)"/>
+              <ellipse cx="125" cy="200" rx="8" ry="18" stroke="#C8A96B" stroke-width="0.4" transform="rotate(-45 125 200)"/>
+              <!-- Border dots -->
+              <circle cx="100" cy="55" r="2" fill="#C8A96B"/>
+              <circle cx="100" cy="245" r="2" fill="#C8A96B"/>
+              <circle cx="48" cy="150" r="2" fill="#C8A96B"/>
+              <circle cx="152" cy="150" r="2" fill="#C8A96B"/>
+            </svg>
+          </div>
+          <div class="about-img-accent">
+            <span class="about-img-accent-num">137</span>
+            <span class="about-img-accent-label">Years of<br>Weaving Heritage</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <span class="eyebrow">Our Heritage</span>
+        <h2 class="section-title" id="about-heading">
+          Where the Ganga<br>Meets the <em>Golden Loom</em>
+        </h2>
+        <blockquote class="about-pullquote">
+          "In every thread lies a prayer. In every weave, a story passed from father to son."
+        </blockquote>
+        <p class="about-body">
+          Kashvi Banaras was born from a singular conviction: that the world's most extraordinary textiles deserve to be worn by the world's most extraordinary women. We work exclusively with sixth-generation master weavers in the narrow galis of Varanasi — families who have guarded the secrets of kadhua weaving, kinkhab, and shikargah patterns since the Mughal era.
+        </p>
+        <p class="about-body">
+          Each piece is a collaboration between artisan and imagination. Our zari never tarnishes. Our silks are sourced from the finest mulberry farms. And every creation carries a handwritten certificate of authenticity, signed by the weaver who made it.
+        </p>
+        <a href="#" class="btn-primary" style="margin-top:12px"><span>Discover Our Story</span></a>
+
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-num">47</span>
+            <span class="stat-label">Artisan Families</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">6</span>
+            <span class="stat-label">Generations</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">22k+</span>
+            <span class="stat-label">Brides Adorned</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Collections -->
+<section class="collections" id="collections" aria-labelledby="collections-heading">
+  <div class="container-wide">
+    <div class="collections-header">
+      <div class="collections-header-text">
+        <span class="eyebrow">Featured Collections</span>
+        <h2 class="section-title" id="collections-heading">
+          Curated for the<br><em>Discerning Woman</em>
+        </h2>
+        <p class="collections-sub">
+          Five distinct worlds of Banarasi splendour, each as timeless as the city that birthed it.
+        </p>
+      </div>
+      <a href="#" class="btn-text-gold">
+        View All Collections
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="collections-grid" role="list">
+      <!-- Bridal Banarasi (large) -->
+      <div class="coll-card" role="listitem" tabindex="0" aria-label="Bridal Banarasi Collection">
+        <div class="coll-placeholder" style="min-height:600px">
+          <!-- Decorative motif -->
+          <div class="coll-motif">
+            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" fill="none" width="180" height="180">
+              <circle cx="150" cy="150" r="120" stroke="#C8A96B" stroke-width="0.5"/>
+              <circle cx="150" cy="150" r="90" stroke="#C8A96B" stroke-width="0.3"/>
+              <circle cx="150" cy="150" r="60" stroke="#C8A96B" stroke-width="0.5"/>
+              <circle cx="150" cy="150" r="30" stroke="#C8A96B" stroke-width="0.5" fill="rgba(200,169,107,0.1)"/>
+              <!-- Petal ring -->
+              <ellipse cx="150" cy="44" rx="12" ry="28" stroke="#C8A96B" stroke-width="0.4" fill="rgba(200,169,107,0.05)"/>
+              <ellipse cx="150" cy="256" rx="12" ry="28" stroke="#C8A96B" stroke-width="0.4" fill="rgba(200,169,107,0.05)"/>
+              <ellipse cx="44" cy="150" rx="28" ry="12" stroke="#C8A96B" stroke-width="0.4" fill="rgba(200,169,107,0.05)"/>
+              <ellipse cx="256" cy="150" rx="28" ry="12" stroke="#C8A96B" stroke-width="0.4" fill="rgba(200,169,107,0.05)"/>
+              <ellipse cx="85" cy="85" rx="12" ry="28" stroke="#C8A96B" stroke-width="0.3" transform="rotate(-45 85 85)" fill="rgba(200,169,107,0.05)"/>
+              <ellipse cx="215" cy="85" rx="12" ry="28" stroke="#C8A96B" stroke-width="0.3" transform="rotate(45 215 85)" fill="rgba(200,169,107,0.05)"/>
+              <ellipse cx="85" cy="215" rx="12" ry="28" stroke="#C8A96B" stroke-width="0.3" transform="rotate(45 85 215)" fill="rgba(200,169,107,0.05)"/>
+              <ellipse cx="215" cy="215" rx="12" ry="28" stroke="#C8A96B" stroke-width="0.3" transform="rotate(-45 215 215)" fill="rgba(200,169,107,0.05)"/>
+            </svg>
+          </div>
+        </div>
+        <div class="coll-overlay"></div>
+        <div class="coll-info">
+          <span class="coll-label">New Season</span>
+          <h3 class="coll-name">Bridal Banarasi</h3>
+          <span class="coll-cta">
+            Explore
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+
+      <!-- Wedding Edit -->
+      <div class="coll-card" role="listitem" tabindex="0" aria-label="Wedding Edit Collection">
+        <div class="coll-placeholder" style="min-height:299px">
+          <div class="coll-motif">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" width="100" height="100">
+              <rect x="30" y="30" width="140" height="140" stroke="#C8A96B" stroke-width="0.5"/>
+              <rect x="50" y="50" width="100" height="100" stroke="#C8A96B" stroke-width="0.3" transform="rotate(45 100 100)"/>
+              <circle cx="100" cy="100" r="30" stroke="#C8A96B" stroke-width="0.5"/>
+            </svg>
+          </div>
+        </div>
+        <div class="coll-overlay"></div>
+        <div class="coll-info">
+          <span class="coll-label">Curated</span>
+          <h3 class="coll-name">The Wedding Edit</h3>
+          <span class="coll-cta">
+            Explore
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+
+      <!-- Festive -->
+      <div class="coll-card" role="listitem" tabindex="0" aria-label="Festive Collection">
+        <div class="coll-placeholder" style="min-height:299px">
+          <div class="coll-motif">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" width="100" height="100">
+              <polygon points="100,20 120,80 180,80 130,120 150,180 100,145 50,180 70,120 20,80 80,80" stroke="#C8A96B" stroke-width="0.5" fill="rgba(200,169,107,0.05)"/>
+              <circle cx="100" cy="100" r="20" stroke="#C8A96B" stroke-width="0.5"/>
+            </svg>
+          </div>
+        </div>
+        <div class="coll-overlay"></div>
+        <div class="coll-info">
+          <span class="coll-label">Festive 2025</span>
+          <h3 class="coll-name">Festive Splendour</h3>
+          <span class="coll-cta">
+            Explore
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+
+      <!-- Heritage Classics -->
+      <div class="coll-card" role="listitem" tabindex="0" aria-label="Heritage Classics Collection">
+        <div class="coll-placeholder" style="min-height:299px">
+          <div class="coll-motif">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" width="100" height="100">
+              <ellipse cx="100" cy="100" rx="70" ry="40" stroke="#C8A96B" stroke-width="0.5"/>
+              <ellipse cx="100" cy="100" rx="40" ry="70" stroke="#C8A96B" stroke-width="0.5"/>
+              <circle cx="100" cy="100" r="15" stroke="#C8A96B" stroke-width="0.5"/>
+            </svg>
+          </div>
+        </div>
+        <div class="coll-overlay"></div>
+        <div class="coll-info">
+          <span class="coll-label">Archive</span>
+          <h3 class="coll-name">Heritage Classics</h3>
+          <span class="coll-cta">
+            Explore
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+
+      <!-- Limited Edition -->
+      <div class="coll-card" role="listitem" tabindex="0" aria-label="Limited Edition Handloom Collection">
+        <div class="coll-placeholder" style="min-height:299px">
+          <div class="coll-motif">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none" width="100" height="100">
+              <path d="M100 20 L180 100 L100 180 L20 100 Z" stroke="#C8A96B" stroke-width="0.5"/>
+              <path d="M100 40 L160 100 L100 160 L40 100 Z" stroke="#C8A96B" stroke-width="0.3"/>
+              <circle cx="100" cy="100" r="25" stroke="#C8A96B" stroke-width="0.5" fill="rgba(200,169,107,0.08)"/>
+            </svg>
+          </div>
+        </div>
+        <div class="coll-overlay"></div>
+        <div class="coll-info">
+          <span class="coll-label">Only 12 Pieces</span>
+          <h3 class="coll-name">Limited Handloom</h3>
+          <span class="coll-cta">
+            Explore
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products -->
+<section class="products" aria-labelledby="products-heading">
+  <div class="container">
+    <div style="text-align:center; margin-bottom: 16px;">
+      <span class="eyebrow" style="display:inline-block">New Arrivals</span>
+    </div>
+    <div class="gold-rule"><span>This Season's Edit</span></div>
+    <h2 class="section-title" id="products-heading" style="text-align:center; margin-bottom:48px">
+      The <em>Gulabi Durbar</em> Collection
+    </h2>
+
+    <nav class="products-nav" aria-label="Product filter">
+      <button class="products-nav-btn active" onclick="filterProducts(this)">All</button>
+      <button class="products-nav-btn" onclick="filterProducts(this)">Sarees</button>
+      <button class="products-nav-btn" onclick="filterProducts(this)">Lehengas</button>
+      <button class="products-nav-btn" onclick="filterProducts(this)">Suits</button>
+      <button class="products-nav-btn" onclick="filterProducts(this)">Bridal</button>
+    </nav>
+
+    <div class="products-grid" id="productsGrid">
+      <!-- Product 1 -->
+      <article class="prod-card">
+        <div class="prod-img-wrap">
+          <div class="prod-placeholder prod-p1">
+            <svg viewBox="0 0 120 180" xmlns="http://www.w3.org/2000/svg" fill="none" width="80" height="120" opacity="0.35">
+              <ellipse cx="60" cy="90" rx="25" ry="55" stroke="#C8A96B" stroke-width="0.8"/>
+              <ellipse cx="60" cy="90" rx="15" ry="40" stroke="#C8A96B" stroke-width="0.5"/>
+              <circle cx="60" cy="90" r="5" stroke="#C8A96B" stroke-width="0.8" fill="rgba(200,169,107,0.3)"/>
+              <circle cx="60" cy="28" r="3" fill="#C8A96B"/>
+              <circle cx="60" cy="152" r="3" fill="#C8A96B"/>
+            </svg>
+          </div>
+          <span class="prod-badge badge-bridal">Bridal</span>
+          <div class="prod-actions" role="group" aria-label="Product actions">
+            <button class="prod-action-btn" aria-label="Add to wishlist">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="prod-action-btn" aria-label="Quick view">
+              <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <button class="prod-quick-view" aria-label="Quick view Gulabi Kinkhab">Quick View</button>
+        </div>
+        <div class="prod-info">
+          <h3 class="prod-name">Gulabi Kinkhab Saree</h3>
+          <p class="prod-detail">Pure Silk · Kadhua Weave · Rose Gold Zari</p>
+          <p class="prod-price">₹ 1,85,000</p>
+          <a href="#" class="prod-whatsapp" aria-label="WhatsApp inquiry for this product">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.477 2 2 6.477 2 12c0 1.897.505 3.673 1.383 5.203L2 22l4.878-1.366A9.952 9.952 0 0 0 11.998 22c5.523 0 10-4.477 10-10S17.521 2 11.998 2z"/></svg>
+            Inquire via WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="prod-card">
+        <div class="prod-img-wrap">
+          <div class="prod-placeholder prod-p2">
+            <svg viewBox="0 0 120 180" xmlns="http://www.w3.org/2000/svg" fill="none" width="80" height="120" opacity="0.35">
+              <rect x="35" y="30" width="50" height="120" stroke="#C8A96B" stroke-width="0.8"/>
+              <rect x="45" y="45" width="30" height="90" stroke="#C8A96B" stroke-width="0.4"/>
+              <circle cx="60" cy="90" r="10" stroke="#C8A96B" stroke-width="0.6"/>
+              <line x1="60" y1="30" x2="60" y2="150" stroke="#C8A96B" stroke-width="0.3"/>
+            </svg>
+          </div>
+          <span class="prod-badge badge-new">New</span>
+          <div class="prod-actions" role="group" aria-label="Product actions">
+            <button class="prod-action-btn" aria-label="Add to wishlist">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="prod-action-btn" aria-label="Quick view">
+              <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <button class="prod-quick-view">Quick View</button>
+        </div>
+        <div class="prod-info">
+          <h3 class="prod-name">Shyama Katan Lehenga</h3>
+          <p class="prod-detail">Katan Silk · Meenakari Work · Zardosi Border</p>
+          <p class="prod-price"><span class="prod-price-original">₹ 3,20,000</span>₹ 2,88,000</p>
+          <a href="#" class="prod-whatsapp" aria-label="WhatsApp inquiry">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.477 2 2 6.477 2 12c0 1.897.505 3.673 1.383 5.203L2 22l4.878-1.366A9.952 9.952 0 0 0 11.998 22c5.523 0 10-4.477 10-10S17.521 2 11.998 2z"/></svg>
+            Inquire via WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="prod-card">
+        <div class="prod-img-wrap">
+          <div class="prod-placeholder prod-p3">
+            <svg viewBox="0 0 120 180" xmlns="http://www.w3.org/2000/svg" fill="none" width="80" height="120" opacity="0.35">
+              <polygon points="60,20 95,80 95,150 60,165 25,150 25,80" stroke="#C8A96B" stroke-width="0.8"/>
+              <polygon points="60,40 80,85 80,140 60,152 40,140 40,85" stroke="#C8A96B" stroke-width="0.4"/>
+              <circle cx="60" cy="90" r="12" stroke="#C8A96B" stroke-width="0.6" fill="rgba(200,169,107,0.1)"/>
+            </svg>
+          </div>
+          <span class="prod-badge badge-limited">Limited — 3 Left</span>
+          <div class="prod-actions" role="group" aria-label="Product actions">
+            <button class="prod-action-btn" aria-label="Add to wishlist">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="prod-action-btn" aria-label="Quick view">
+              <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <button class="prod-quick-view">Quick View</button>
+        </div>
+        <div class="prod-info">
+          <h3 class="prod-name">Neelambari Tissue Saree</h3>
+          <p class="prod-detail">Tissue Silk · Shikargah Weave · Antique Zari</p>
+          <p class="prod-price">₹ 4,50,000</p>
+          <a href="#" class="prod-whatsapp" aria-label="WhatsApp inquiry">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.477 2 2 6.477 2 12c0 1.897.505 3.673 1.383 5.203L2 22l4.878-1.366A9.952 9.952 0 0 0 11.998 22c5.523 0 10-4.477 10-10S17.521 2 11.998 2z"/></svg>
+            Inquire via WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <!-- Product 4 -->
+      <article class="prod-card">
+        <div class="prod-img-wrap">
+          <div class="prod-placeholder prod-p4">
+            <svg viewBox="0 0 120 180" xmlns="http://www.w3.org/2000/svg" fill="none" width="80" height="120" opacity="0.35">
+              <path d="M60 20 Q90 60 85 90 Q80 130 60 160 Q40 130 35 90 Q30 60 60 20Z" stroke="#C8A96B" stroke-width="0.8"/>
+              <path d="M60 40 Q78 68 74 90 Q70 118 60 140 Q50 118 46 90 Q42 68 60 40Z" stroke="#C8A96B" stroke-width="0.4"/>
+              <circle cx="60" cy="88" r="10" stroke="#C8A96B" stroke-width="0.6"/>
+            </svg>
+          </div>
+          <span class="prod-badge badge-new">New</span>
+          <div class="prod-actions" role="group" aria-label="Product actions">
+            <button class="prod-action-btn" aria-label="Add to wishlist">
+              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="prod-action-btn" aria-label="Quick view">
+              <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <button class="prod-quick-view">Quick View</button>
+        </div>
+        <div class="prod-info">
+          <h3 class="prod-name">Suvarna Tanchoi Suit</h3>
+          <p class="prod-detail">Tanchoi Silk · Butah Motif · Pure Zari Dupatta</p>
+          <p class="prod-price">₹ 95,000</p>
+          <a href="#" class="prod-whatsapp" aria-label="WhatsApp inquiry">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.477 2 2 6.477 2 12c0 1.897.505 3.673 1.383 5.203L2 22l4.878-1.366A9.952 9.952 0 0 0 11.998 22c5.523 0 10-4.477 10-10S17.521 2 11.998 2z"/></svg>
+            Inquire via WhatsApp
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <div style="text-align:center; margin-top:56px">
+      <a href="#" class="btn-primary"><span>View Full Collection</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Craftsmanship -->
+<section class="craft" aria-labelledby="craft-heading">
+  <div class="container">
+    <div class="craft-intro">
+      <span class="eyebrow">Our Craft</span>
+      <h2 class="section-title" id="craft-heading">
+        A Saree is Born in<br><em>Twelve Weeks of</em> Prayer
+      </h2>
+      <p class="craft-intro-body">
+        From the first warp thread to the final border seal, each Kashvi Banaras creation passes through the hands of fifteen artisans. What you wear is not merely fabric — it is the distillation of a civilisation's finest art.
+      </p>
+    </div>
+
+    <div class="craft-timeline" id="craftTimeline">
+      <div class="craft-timeline-line">
+        <div class="craft-timeline-progress" id="craftProgress"></div>
+      </div>
+      <div class="craft-steps">
+        <div class="craft-step" data-step="1">
+          <div class="craft-step-dot">
+            <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2zM12 14c-5.33 0-8 2.67-8 4v2h16v-2c0-1.33-2.67-4-8-4z"/></svg>
+          </div>
+          <span class="craft-step-num">01</span>
+          <h3 class="craft-step-title">Silk Sourcing</h3>
+          <p class="craft-step-desc">Only double-threaded mulberry silk from Malda and Mysore enters our looms — chosen by hand.</p>
+        </div>
+        <div class="craft-step" data-step="2">
+          <div class="craft-step-dot">
+            <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+          <span class="craft-step-num">02</span>
+          <h3 class="craft-step-title">Dyeing</h3>
+          <p class="craft-step-desc">Threads are hand-dyed using mineral pigments in our own ateliers, aged for permanence.</p>
+        </div>
+        <div class="craft-step" data-step="3">
+          <div class="craft-step-dot">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <span class="craft-step-num">03</span>
+          <h3 class="craft-step-title">Naqsha Design</h3>
+          <p class="craft-step-desc">A master naqshband draws the pattern on graph paper — thousands of squares encoding the weave.</p>
+        </div>
+        <div class="craft-step" data-step="4">
+          <div class="craft-step-dot">
+            <svg viewBox="0 0 24 24"><path d="M12 2 L2 7 L12 12 L22 7 Z"/><path d="M2 17 L12 22 L22 17"/><path d="M2 12 L12 17 L22 12"/></svg>
+          </div>
+          <span class="craft-step-num">04</span>
+          <h3 class="craft-step-title">Loom Setup</h3>
+          <p class="craft-step-desc">Setting the throw loom takes three days. A single mistake in the warp means starting over.</p>
+        </div>
+        <div class="craft-step" data-step="5">
+          <div class="craft-step-dot">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <span class="craft-step-num">05</span>
+          <h3 class="craft-step-title">Kadhua Weaving</h3>
+          <p class="craft-step-desc">The weaver works 12 hours a day for weeks, placing each gold thread by hand — two inches per hour.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:72px">
+      <a href="#" class="btn-outline" style="color:var(--gold); border-color:rgba(200,169,107,0.4)">
+        <span>Meet Our Artisans</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" aria-labelledby="testi-heading">
+  <div class="container">
+    <div class="testimonials-header">
+      <span class="eyebrow" style="display:inline-block">Client Stories</span>
+      <h2 class="section-title" id="testi-heading">
+        Worn with <em>Reverence,</em><br>Remembered Forever
+      </h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testi-card">
+        <span class="testi-quote-mark" aria-hidden="true">"</span>
+        <div class="testi-stars" aria-label="5 out of 5 stars">
+          <svg class="testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testi-text">
+          "I wore a Kashvi Banaras Kanjivaram-zari bridal saree on my wedding day in London. My mother-in-law, who grew up in Varanasi, wept when she saw it. She said it was exactly what her own mother had worn. That is the power of this craft."
+        </p>
+        <div class="testi-divider"></div>
+        <p class="testi-author-name">Ananya Mehta</p>
+        <p class="testi-author-detail">London, United Kingdom · Bridal Banarasi</p>
+      </div>
+
+      <div class="testi-card">
+        <span class="testi-quote-mark" aria-hidden="true">"</span>
+        <div class="testi-stars" aria-label="5 out of 5 stars">
+          <svg class="testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testi-text">
+          "As a fashion buyer who works across Paris and Mumbai, I have handled the finest textiles from every tradition. Kashvi Banaras operates at a level I rarely encounter — their Neelambari tissue is as technically impressive as anything coming out of Lyon."
+        </p>
+        <div class="testi-divider"></div>
+        <p class="testi-author-name">Priya Raghunathan</p>
+        <p class="testi-author-detail">Paris, France · Fashion Buyer</p>
+      </div>
+
+      <div class="testi-card">
+        <span class="testi-quote-mark" aria-hidden="true">"</span>
+        <div class="testi-stars" aria-label="5 out of 5 stars">
+          <svg class="testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testi-text">
+          "The personal styling consultation was unlike anything I have experienced. They understood exactly what I wanted to express at my daughter's wedding. The saree they created for me is now going to be heirloom. My granddaughters will wear it."
+        </p>
+        <div class="testi-divider"></div>
+        <p class="testi-author-name">Sudha Krishnamurthy</p>
+        <p class="testi-author-detail">Singapore · Heritage Collection</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Journal -->
+<section class="journal" aria-labelledby="journal-heading">
+  <div class="container">
+    <div class="journal-header">
+      <span class="eyebrow" style="display:inline-block">The Kashvi Journal</span>
+      <h2 class="section-title" id="journal-heading">
+        Stories from the <em>Ghat &amp; the Loom</em>
+      </h2>
+    </div>
+
+    <div class="journal-grid">
+      <article class="journal-card">
+        <div class="journal-img-wrap">
+          <div class="journal-img-placeholder journal-p1">
+            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" fill="none" width="120" height="90" opacity="0.3">
+              <path d="M20 120 Q60 40 100 80 Q140 120 180 40" stroke="#C8A96B" stroke-width="1.5"/>
+              <circle cx="100" cy="80" r="20" stroke="#C8A96B" stroke-width="0.8"/>
+              <path d="M40 140 Q80 80 120 110 Q160 140 190 80" stroke="#C8A96B" stroke-width="0.6"/>
+            </svg>
+          </div>
+        </div>
+        <span class="journal-cat">Heritage</span>
+        <h3 class="journal-title">The Last Kinkhab Weavers: A Dying Art Finds New Voice</h3>
+        <p class="journal-excerpt">In the winding lanes of Madanpura, a handful of families still weave kinkhab — the Mughal-era fabric of gods and emperors. We spent three days with master weaver Ramji Prasad and his son.</p>
+        <div class="journal-meta">May 2025 &nbsp;·&nbsp; 12 min read</div>
+      </article>
+
+      <article class="journal-card">
+        <div class="journal-img-wrap">
+          <div class="journal-img-placeholder journal-p2">
+            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" fill="none" width="120" height="90" opacity="0.3">
+              <rect x="30" y="30" width="140" height="90" stroke="#C8A96B" stroke-width="0.8"/>
+              <path d="M30 70 Q100 50 170 70" stroke="#C8A96B" stroke-width="0.5"/>
+              <circle cx="100" cy="75" r="15" stroke="#C8A96B" stroke-width="0.5"/>
+            </svg>
+          </div>
+        </div>
+        <span class="journal-cat">Styling Guide</span>
+        <h3 class="journal-title">How to Drape a Banarasi Saree for a Winter Wedding in London</h3>
+        <p class="journal-excerpt">Layering a Banarasi with cashmere shawls and statement jewellery for cold-weather ceremonies.</p>
+        <div class="journal-meta">April 2025 &nbsp;·&nbsp; 8 min read</div>
+      </article>
+
+      <article class="journal-card">
+        <div class="journal-img-wrap">
+          <div class="journal-img-placeholder journal-p3">
+            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" fill="none" width="120" height="90" opacity="0.3">
+              <ellipse cx="100" cy="75" rx="70" ry="45" stroke="#C8A96B" stroke-width="0.8"/>
+              <ellipse cx="100" cy="75" rx="40" ry="25" stroke="#C8A96B" stroke-width="0.5"/>
+              <circle cx="100" cy="75" r="10" stroke="#C8A96B" stroke-width="0.5"/>
+            </svg>
+          </div>
+        </div>
+        <span class="journal-cat">Bridal</span>
+        <h3 class="journal-title">Zoya's Bridal Story: Three Sarees for Three Ceremonies</h3>
+        <p class="journal-excerpt">From the intimate mehendi to the grand baraat — how one bride built her trousseau with Kashvi Banaras.</p>
+        <div class="journal-meta">March 2025 &nbsp;·&nbsp; 10 min read</div>
+      </article>
+    </div>
+
+    <div style="text-align:center; margin-top:56px">
+      <a href="#" class="btn-text-gold" style="color:var(--maroon); border-color:rgba(90,15,28,0.25)">
+        Read All Stories
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer aria-label="Site footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="footer-logo">Kashvi Banaras</p>
+          <span class="footer-logo-sub">Est. Varanasi · Since 1887</span>
+          <p class="footer-tagline">
+            Handwoven heirlooms from the heart of Varanasi, created by master artisans for the modern woman who values what endures.
+          </p>
+          <span class="footer-newsletter-label">Join Our Inner Circle</span>
+          <div class="footer-newsletter-form" role="form" aria-label="Newsletter signup">
+            <input type="email" class="footer-newsletter-input" placeholder="Your email address" aria-label="Email address">
+            <button class="footer-newsletter-btn" aria-label="Subscribe to newsletter">Subscribe</button>
+          </div>
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Pinterest">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.23-5.22 1.23-5.22s-.31-.63-.31-1.56c0-1.46.85-2.55 1.9-2.55.9 0 1.33.67 1.33 1.48 0 .9-.58 2.26-.87 3.51-.25 1.05.52 1.9 1.55 1.9 1.85 0 3.28-1.95 3.28-4.77 0-2.49-1.79-4.23-4.35-4.23-2.96 0-4.7 2.22-4.7 4.51 0 .89.34 1.85.77 2.37.08.1.09.19.07.29-.08.32-.25 1.05-.29 1.19-.05.19-.16.23-.37.14-1.39-.65-2.26-2.68-2.26-4.32 0-3.51 2.55-6.73 7.36-6.73 3.86 0 6.86 2.75 6.86 6.42 0 3.83-2.41 6.91-5.76 6.91-1.12 0-2.18-.58-2.54-1.27l-.69 2.59c-.25.97-.93 2.18-1.39 2.92.05.02.1.03.15.03z"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.97A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.95-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.477 2 2 6.477 2 12c0 1.897.505 3.673 1.383 5.203L2 22l4.878-1.366A9.952 9.952 0 0 0 11.998 22c5.523 0 10-4.477 10-10S17.521 2 11.998 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Collections</p>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">New Arrivals</a></li>
+            <li><a href="#" class="footer-link">Bridal Banarasi</a></li>
+            <li><a href="#" class="footer-link">Sarees</a></li>
+            <li><a href="#" class="footer-link">Lehengas</a></li>
+            <li><a href="#" class="footer-link">Suits & Sets</a></li>
+            <li><a href="#" class="footer-link">Heritage Collection</a></li>
+            <li><a href="#" class="footer-link">Limited Edition</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Services</p>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Styling Consultation</a></li>
+            <li><a href="#" class="footer-link">Bespoke Orders</a></li>
+            <li><a href="#" class="footer-link">Bridal Appointments</a></li>
+            <li><a href="#" class="footer-link">Gift Curation</a></li>
+            <li><a href="#" class="footer-link">Store Locator</a></li>
+            <li><a href="#" class="footer-link">NRI Shipping</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-col-title">Support</p>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Our Craft</a></li>
+            <li><a href="#" class="footer-link">Size Guide</a></li>
+            <li><a href="#" class="footer-link">Care Instructions</a></li>
+            <li><a href="#" class="footer-link">Shipping & Returns</a></li>
+            <li><a href="#" class="footer-link">Authentication</a></li>
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Kashvi Banaras. All rights reserved. GI Certified Handloom.</p>
+      <div class="footer-legal">
+        <a href="#" class="footer-legal-link">Privacy Policy</a>
+        <a href="#" class="footer-legal-link">Terms of Service</a>
+        <a href="#" class="footer-legal-link">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<div class="floating-wa" role="button" tabindex="0" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M11.998 2C6.477 2 2 6.477 2 12c0 1.897.505 3.673 1.383 5.203L2 22l4.878-1.366A9.952 9.952 0 0 0 11.998 22c5.523 0 10-4.477 10-10S17.521 2 11.998 2z"/>
+  </svg>
+  <span class="floating-wa-label" aria-hidden="true">Chat with a Stylist</span>
+</div>
+
+<script>
+// Nav scroll behaviour
+(function() {
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
+// Product filter tabs
+function filterProducts(btn) {
+  document.querySelectorAll('.products-nav-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+// Craftsmanship timeline progress on scroll
+(function() {
+  const timeline = document.getElementById('craftTimeline');
+  const progress = document.getElementById('craftProgress');
+  const steps = document.querySelectorAll('.craft-step');
+  if (!timeline || !progress) return;
+
+  const updateTimeline = () => {
+    const rect = timeline.getBoundingClientRect();
+    const windowH = window.innerHeight;
+    const visible = Math.max(0, Math.min(1, (windowH - rect.top) / (windowH + rect.height)));
+    progress.style.width = (visible * 100) + '%';
+    steps.forEach((step, i) => {
+      step.classList.toggle('active', visible > (i / steps.length) * 0.8);
+    });
+  };
+
+  window.addEventListener('scroll', updateTimeline, { passive: true });
+  updateTimeline();
+})();
+
+// Entrance animations via IntersectionObserver
+(function() {
+  const targets = document.querySelectorAll(
+    '.about-grid, .coll-card, .prod-card, .testi-card, .journal-card, .craft-step'
+  );
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  targets.forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(28px)';
+    el.style.transition = `opacity 0.7s ease ${(i % 4) * 0.1}s, transform 0.7s ease ${(i % 4) * 0.1}s`;
+    obs.observe(el);
+  });
+})();
+
+// Wishlist toggle
+document.querySelectorAll('.prod-action-btn').forEach(btn => {
+  if (btn.getAttribute('aria-label') === 'Add to wishlist') {
+    btn.addEventListener('click', function() {
+      const svg = this.querySelector('svg');
+      const active = svg.style.fill === 'var(--maroon)';
+      svg.style.fill = active ? 'none' : 'var(--maroon)';
+      svg.style.stroke = active ? 'var(--charcoal)' : 'var(--maroon)';
+      this.setAttribute('aria-label', active ? 'Add to wishlist' : 'Remove from wishlist');
+    });
+  }
+});
+</script>
+</body>
+</html>
